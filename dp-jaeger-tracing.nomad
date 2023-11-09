@@ -25,6 +25,9 @@ job "dp-jaeger-tracing" {
       port "ui" {
         to = 16686
       }
+      port "health" {
+        to = 16687
+      }
     }
 
     service {
@@ -46,7 +49,7 @@ job "dp-jaeger-tracing" {
 
       config {
         image = "{{ECR_URL}}:concourse-{{REVISION}}"
-        ports = ["grpc", "ui"]
+        ports = ["grpc","ui","health"]
       }
 
       resources {
@@ -101,6 +104,9 @@ job "dp-jaeger-tracing" {
       port "ui" {
         to = 16686
       }
+      port "health" {
+        to = 16687
+      }
     }
 
     service {
@@ -122,7 +128,7 @@ job "dp-jaeger-tracing" {
 
       config {
         image = "{{ECR_URL}}:concourse-{{REVISION}}"
-        ports = ["grpc","ui"]
+        ports = ["grpc","ui","health"]
       }
 
       resources {
@@ -177,6 +183,9 @@ job "dp-jaeger-tracing" {
       port "ui" {
         to = 16686
       }
+      port "health" {
+        to = 16687
+      }
     }
 
     service {
@@ -198,7 +207,7 @@ job "dp-jaeger-tracing" {
 
       config {
         image = "{{ECR_URL}}:concourse-{{REVISION}}"
-        ports = ["grpc","ui"]
+        ports = ["grpc","ui","health"]
       }
 
       resources {
