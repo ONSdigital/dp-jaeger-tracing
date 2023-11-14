@@ -1,5 +1,5 @@
 #!/bin/bash -eux
 
-pushd dp-adot-collector
+pushd dp-jaeger-tracing
   cp Dockerfile.concourse ../build
 popd
